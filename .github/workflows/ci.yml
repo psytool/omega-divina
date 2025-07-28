@@ -1,0 +1,25 @@
+﻿name: Quantum Validation
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup PowerShell
+      uses: actions/setup-powershell@v3
+      with:
+        pwsh: true
+
+    - name: Install Pester
+      shell: pwsh
+      run: |
+        Install-Module Pester -Force -AllowClobber -Scope CurrentUser
+        Import-Module Pester
+
+    - name: Run Tests
+      shell: pwsh
+      run: |
+        Import-Module ./core/OmegaCore.psm1 -Force
+        Invoke-Pester ./tests -Output Detailed

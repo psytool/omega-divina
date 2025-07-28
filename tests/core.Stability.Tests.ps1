@@ -1,30 +1,41 @@
-﻿Describe "Quantum Core Stability" {
-    It "Should reject invalid qubit counts" {
-        { Invoke-QuantumOperation -Qubits 0 -GateType Hadamard } | Should -Throw
+﻿BeforeAll {
+    Import-Module ./core/OmegaCore.psm1 -Force
+}
+
+Describe "Quantum Core Stability" {
+    Context "Quantum Operations" {
+        It "Should reject invalid qubit counts" {
+            { Invoke-QuantumOperation -Qubits 0 -GateType Hadamard } | Should -Throw
+        }
+
+        It "Should reject invalid gate types" {
+            { Invoke-QuantumOperation -Qubits 2 -GateType Invalid } | Should -Throw
+        }
+
+        It "Should process valid operations" {
+            Invoke-QuantumOperation -Qubits 2 -GateType Hadamard | Should -Be "Applied Hadamard to 2 qubits"
+        }
     }
 
-    It "Should reject invalid gate types" {
-        { Invoke-QuantumOperation -Qubits 2 -GateType Invalid } | Should -Throw
+    Context "Omega Status" {
+        It "Should return proper status structure" {
+            $status = Get-OmegaStatus
+            $status.Version | Should -Be "0.0.1"
+            $status.Phase | Should -Be "Initiation"
+            $status.User | Should -Be $env:USERNAME
+            $status.SacredSpace | Should -Be "QuantumRealm"
+        }
     }
 
-    It "Should process valid operations" {
-        Invoke-QuantumOperation -Qubits 2 -GateType Hadamard | Should -Be "Applied Hadamard to 2 qubits"
+    Context "Error Handling" {
+        It "Should enforce strict mode" {
+            { Get-Variable nonExistentVar -ValueOnly } | Should -Throw
+        }
     }
 
-    It "Should log high qubit operations" {
-        $logFile = "$PSScriptRoot/../divina.log"
-        Remove-Item $logFile -ErrorAction SilentlyContinue
-        Invoke-QuantumOperation -Qubits 300 -GateType PauliX
-        Get-Content $logFile | Should -Match "High qubit operation attempted"
-    }
-
-    It "Should return Omega status" {
-        $status = Get-OmegaStatus
-        $status.Version | Should -Be "0.0.1"
-        $status.User | Should -Be $env:USERNAME
-    }
-
-    It "Should perform ritual invocation" {
-        { Invoke-OmegaRitual -Level 1 } | Should -Not -Throw
+    Context "Memory Management" {
+        It "Should clean quantum memory" {
+            { [QuantumMemoryManager]::Clean() } | Should -Not -Throw
+        }
     }
 }

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE report PUBLIC "-//JACOCO//DTD Report 1.1//EN" "report.dtd"[]>
-<report name="Pester (07/28/2025 21:50:14)">
-  <sessioninfo id="this" start="1753739414573" dump="1753739414721" />
+<report name="Pester (07/28/2025 21:52:05)">
+  <sessioninfo id="this" start="1753739525121" dump="1753739525284" />
   <package name="core">
     <class name="core/OmegaCore" sourcefilename="OmegaCore.psm1">
       <method name="Get-OmegaStatus" desc="()" line="2">
-        <counter type="INSTRUCTION" missed="0" covered="5" />
-        <counter type="LINE" missed="0" covered="5" />
-        <counter type="METHOD" missed="0" covered="1" />
+        <counter type="INSTRUCTION" missed="5" covered="0" />
+        <counter type="LINE" missed="5" covered="0" />
+        <counter type="METHOD" missed="1" covered="0" />
       </method>
       <method name="Invoke-OmegaRitual" desc="()" line="12">
         <counter type="INSTRUCTION" missed="0" covered="1" />
@@ -34,17 +34,17 @@
         <counter type="LINE" missed="2" covered="0" />
         <counter type="METHOD" missed="1" covered="0" />
       </method>
-      <counter type="INSTRUCTION" missed="5" covered="13" />
-      <counter type="LINE" missed="5" covered="11" />
-      <counter type="METHOD" missed="2" covered="4" />
-      <counter type="CLASS" missed="0" covered="1" />
+      <counter type="INSTRUCTION" missed="10" covered="8" />
+      <counter type="LINE" missed="10" covered="6" />
+      <counter type="METHOD" missed="3" covered="3" />
+      <counter type="CLASS" missed="1" covered="0" />
     </class>
     <sourcefile name="OmegaCore.psm1">
-      <line nr="2" mi="0" ci="1" mb="0" cb="0" />
-      <line nr="3" mi="0" ci="1" mb="0" cb="0" />
-      <line nr="4" mi="0" ci="1" mb="0" cb="0" />
-      <line nr="5" mi="0" ci="1" mb="0" cb="0" />
-      <line nr="6" mi="0" ci="1" mb="0" cb="0" />
+      <line nr="2" mi="1" ci="0" mb="0" cb="0" />
+      <line nr="3" mi="1" ci="0" mb="0" cb="0" />
+      <line nr="4" mi="1" ci="0" mb="0" cb="0" />
+      <line nr="5" mi="1" ci="0" mb="0" cb="0" />
+      <line nr="6" mi="1" ci="0" mb="0" cb="0" />
       <line nr="12" mi="0" ci="1" mb="0" cb="0" />
       <line nr="16" mi="1" ci="0" mb="0" cb="0" />
       <line nr="17" mi="1" ci="0" mb="0" cb="0" />
@@ -56,18 +56,18 @@
       <line nr="48" mi="1" ci="0" mb="0" cb="0" />
       <line nr="51" mi="1" ci="0" mb="0" cb="0" />
       <line nr="52" mi="1" ci="0" mb="0" cb="0" />
-      <counter type="INSTRUCTION" missed="5" covered="13" />
-      <counter type="LINE" missed="5" covered="11" />
-      <counter type="METHOD" missed="2" covered="4" />
-      <counter type="CLASS" missed="0" covered="1" />
+      <counter type="INSTRUCTION" missed="10" covered="8" />
+      <counter type="LINE" missed="10" covered="6" />
+      <counter type="METHOD" missed="3" covered="3" />
+      <counter type="CLASS" missed="1" covered="0" />
     </sourcefile>
-    <counter type="INSTRUCTION" missed="5" covered="13" />
-    <counter type="LINE" missed="5" covered="11" />
-    <counter type="METHOD" missed="2" covered="4" />
-    <counter type="CLASS" missed="0" covered="1" />
+    <counter type="INSTRUCTION" missed="10" covered="8" />
+    <counter type="LINE" missed="10" covered="6" />
+    <counter type="METHOD" missed="3" covered="3" />
+    <counter type="CLASS" missed="1" covered="0" />
   </package>
-  <counter type="INSTRUCTION" missed="5" covered="13" />
-  <counter type="LINE" missed="5" covered="11" />
-  <counter type="METHOD" missed="2" covered="4" />
-  <counter type="CLASS" missed="0" covered="1" />
+  <counter type="INSTRUCTION" missed="10" covered="8" />
+  <counter type="LINE" missed="10" covered="6" />
+  <counter type="METHOD" missed="3" covered="3" />
+  <counter type="CLASS" missed="1" covered="0" />
 </report>

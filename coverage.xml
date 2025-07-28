@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE report PUBLIC "-//JACOCO//DTD Report 1.1//EN" "report.dtd"[]>
-<report name="Pester (07/28/2025 21:52:05)">
-  <sessioninfo id="this" start="1753739525121" dump="1753739525284" />
+<report name="Pester (07/28/2025 21:53:25)">
+  <sessioninfo id="this" start="1753739605046" dump="1753739605215" />
   <package name="core">
     <class name="core/OmegaCore" sourcefilename="OmegaCore.psm1">
       <method name="Get-OmegaStatus" desc="()" line="2">
